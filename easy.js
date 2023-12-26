@@ -1,19 +1,17 @@
 // 88. Merge Sorted Array
+// the end of merge sort
 
-console.log(
-  (nums1 = [1, 2, 3, 0, 0, 0]),
-  (m = 3),
-  (nums2 = [2, 5, 6]),
-  (n = 3)
-); // [1,2,2,3,5,6]
-
-var merge = function (nums1, m, nums2, n) {
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < m; j++) {
-      if (nums2[i] <= nums1[j]) {
-        nums1.splice(j, 0, nums2[i]);
-        break;
-      }
+// m, n의 0부터 - in-place sorting
+const mergeWithSort = function (nums1, m, nums2, n) {
+    for(let i = m, j = 0; j < n ; i++, j++){
+        nums1[i] = nums2[j];
     }
-  }
+    nums1.sort((a,b)=>a-b);
+    return nums1
 };
+
+// console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+
+const insertionSort = function (nums1, m, nums2, n) {
+    
+}
