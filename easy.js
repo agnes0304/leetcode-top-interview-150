@@ -77,30 +77,27 @@ const removeDuplicates = function (nums) {
 // ❓ 169. Majority Element
 
 var majorityElement = function (nums) {
-//   let count = 0;
-//   let el = 0; 
-//   for (let i = 0; i < nums.length; i++) {
-//     for (let j = 0; j < nums.length; j++) {
-//       if (nums[i] === nums[j]) {
-//         count++;
-//       }
-//     }
-//     if(count > nums.length/2){
-//         el = nums[i];
-//         break
-//     } else {
-//         count = 0;
-//     }
-//   }
-//   return el;
-
-
+  //   let count = 0;
+  //   let el = 0;
+  //   for (let i = 0; i < nums.length; i++) {
+  //     for (let j = 0; j < nums.length; j++) {
+  //       if (nums[i] === nums[j]) {
+  //         count++;
+  //       }
+  //     }
+  //     if(count > nums.length/2){
+  //         el = nums[i];
+  //         break
+  //     } else {
+  //         count = 0;
+  //     }
+  //   }
+  //   return el;
 };
 
 // lol 1500ms
 
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
-
 
 // ❓ 121. Best Time to Buy and Sell Stock
 
@@ -112,14 +109,11 @@ var majorityElement = function (nums) {
 
 // ❓ 28. Find the Index of the First Occurrence in a String
 
-
 // 💡💡💡 Two Pointers
 
 // ❓ 125. Valid Palindrome
 
 // ❓ 392. Is Subsequence
-
-
 
 // 💡💡💡 Hashmap
 
@@ -133,17 +127,25 @@ var majorityElement = function (nums) {
 
 // ❓ 1. Two Sum
 
-const nums = [3,3]
-const target = 6
+const nums = [0, 1, 2, 2, 4, 7, 8, 10];
+const target = 6;
 
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
+  const m = new Map();
+  const arr = [];
+  let rest;
 
+  for (let i = 0; i < nums.length; i++) {
+    rest = target - nums[i];
+    m.set(nums[i], i)
+    if (m.has(rest)){
+        arr.push(i, m.get(rest))
+    }
+  }
+  return arr
 };
 
 console.log(twoSum(nums, target));
-
-
-
 
 // 💡💡💡 Intervals
 
