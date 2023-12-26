@@ -137,9 +137,10 @@ var twoSum = function (nums, target) {
 
   for (let i = 0; i < nums.length; i++) {
     rest = target - nums[i];
-    m.set(nums[i], i)
-    if (m.has(rest)){
-        arr.push(i, m.get(rest))
+    m.set(nums[i], i) // key를 el, val을 idx
+
+    if (m.has(rest)){ // key에 rest있으면
+        arr.push(i, m.get(rest)) // 현재 idx랑 rest idx랑 arr에 push - 여기서 중복 발생
     }
   }
   return arr
