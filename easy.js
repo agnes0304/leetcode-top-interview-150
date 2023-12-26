@@ -102,13 +102,48 @@ var majorityElement = function (nums) {
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
 
 
+// ❓ 121. Best Time to Buy and Sell Stock
 
+// ❓ 13. Roman to Integer
 
+// ❓ 58. Length of Last Word
+
+// ❓ 14. Longest Common Prefix
+
+// ❓ 28. Find the Index of the First Occurrence in a String
 
 
 // 💡💡💡 Two Pointers
 
+// ❓ 125. Valid Palindrome
+
+// ❓ 392. Is Subsequence
+
+
+
 // 💡💡💡 Hashmap
+
+// ❓ 383. Ransom Note
+
+// ❓ 205. Isomorphic Strings
+
+// ❓ 290. Word Pattern
+
+// ❓ 242. Valid Anagram
+
+// ❓ 1. Two Sum
+
+const nums = [3,3]
+const target = 6
+
+var twoSum = function(nums, target) {
+
+};
+
+console.log(twoSum(nums, target));
+
+
+
 
 // 💡💡💡 Intervals
 
