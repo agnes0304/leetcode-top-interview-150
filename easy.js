@@ -9,15 +9,12 @@ const mergeWithSort = function (nums1, m, nums2, n) {
   return nums1;
 };
 
-
 // const insertionSort = function (nums1, m, nums2, n) {
 
 // }
 // console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
 
-
 // 📍 27. Remove Element
-
 
 var removeElementWithMethod = function (nums, val) {
   let k;
@@ -44,9 +41,7 @@ var removeElement = function (nums, val) {
   return k;
 };
 
-
 // 📍 26. Remove Duplicates from Sorted Array
-
 
 var removeDuplicatesWithMethod = function (nums) {
   let count = 0;
@@ -64,16 +59,42 @@ var removeDuplicatesWithMethod = function (nums) {
   return nums.length;
 };
 
-
 const removeDuplicates = function (nums) {
-    let count = 0;
-    for (let i = 1; i<nums.length; i++){
-        if(nums[i]!==nums[count]){
-            nums[count+1] = nums[i];
-            count++;
-        }
+  let count = 0;
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] !== nums[count]) {
+      nums[count + 1] = nums[i];
+      count++;
     }
-    return count+1;
-}
+  }
+  return count + 1;
+};
 
 // console.log(removeDuplicates([1,2,3,3,4,4,4,4,5]))
+
+// 📍 169. Majority Element
+
+var majorityElement = function (nums) {
+//   let count = 0;
+//   let el = 0; 
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = 0; j < nums.length; j++) {
+//       if (nums[i] === nums[j]) {
+//         count++;
+//       }
+//     }
+//     if(count > nums.length/2){
+//         el = nums[i];
+//         break
+//     } else {
+//         count = 0;
+//     }
+//   }
+//   return el;
+
+
+};
+
+// lol 1500ms
+
+// console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
