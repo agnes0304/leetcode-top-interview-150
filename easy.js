@@ -16,10 +16,9 @@ const mergeWithSort = function (nums1, m, nums2, n) {
 
 // }
 
-
-
 // 27. Remove Element
 // nums에서 val과 같지 않은 el의 count k를 반환
+// nums에서는 val과 같은 값 제거
 
 var removeElementWithMethod = function (nums, val) {
   let k;
@@ -37,16 +36,32 @@ var removeElementWithMethod = function (nums, val) {
 
 // console.log(removeElement([2, 2, 2], 0));
 
-
 var removeElement = function (nums, val) {
-    let k=0;
-    for (let i=0; i<nums.length; i++){
-        if(nums[i] !== val){
-            nums[k] = nums[i]
-            k += 1
-        }
+  let k = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[k] = nums[i];
+      k += 1;
     }
-    return k;
+  }
+  return k;
 };
 
-console.log(removeElement([2, 2, 2], 0));
+
+// 26. Remove Duplicates from Sorted Array
+
+var removeDuplicates = function (nums) {
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    for (const el of nums) {
+      if (nums[i] === el) {
+        count++;
+      }
+    }
+    if (count > 1) {
+      nums.splice(i + 1, count - 1);
+    }
+    count = 0;
+  }
+  return nums.length;
+};
