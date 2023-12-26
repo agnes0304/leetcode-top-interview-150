@@ -1,5 +1,4 @@
-// 88. Merge Sorted Array
-// the end of merge sort
+// 📍 88. Merge Sorted Array
 
 // m, n의 0부터 - in-place sorting
 const mergeWithSort = function (nums1, m, nums2, n) {
@@ -10,15 +9,15 @@ const mergeWithSort = function (nums1, m, nums2, n) {
   return nums1;
 };
 
-// console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
 
 // const insertionSort = function (nums1, m, nums2, n) {
 
 // }
+// console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
 
-// 27. Remove Element
-// nums에서 val과 같지 않은 el의 count k를 반환
-// nums에서는 val과 같은 값 제거
+
+// 📍 27. Remove Element
+
 
 var removeElementWithMethod = function (nums, val) {
   let k;
@@ -34,8 +33,6 @@ var removeElementWithMethod = function (nums, val) {
   return k;
 };
 
-// console.log(removeElement([2, 2, 2], 0));
-
 var removeElement = function (nums, val) {
   let k = 0;
   for (let i = 0; i < nums.length; i++) {
@@ -48,9 +45,10 @@ var removeElement = function (nums, val) {
 };
 
 
-// 26. Remove Duplicates from Sorted Array
+// 📍 26. Remove Duplicates from Sorted Array
 
-var removeDuplicates = function (nums) {
+
+var removeDuplicatesWithMethod = function (nums) {
   let count = 0;
   for (let i = 0; i < nums.length; i++) {
     for (const el of nums) {
@@ -65,3 +63,17 @@ var removeDuplicates = function (nums) {
   }
   return nums.length;
 };
+
+
+const removeDuplicates = function (nums) {
+    let count = 0;
+    for (let i = 1; i<nums.length; i++){
+        if(nums[i]!==nums[count]){
+            nums[count+1] = nums[i];
+            count++;
+        }
+    }
+    return count+1;
+}
+
+// console.log(removeDuplicates([1,2,3,3,4,4,4,4,5]))
