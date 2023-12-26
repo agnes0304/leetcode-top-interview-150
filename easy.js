@@ -1,4 +1,6 @@
-// 📍 88. Merge Sorted Array
+// 💡💡💡 Array / String
+
+// ❓ 88. Merge Sorted Array
 
 // m, n의 0부터 - in-place sorting
 const mergeWithSort = function (nums1, m, nums2, n) {
@@ -14,7 +16,7 @@ const mergeWithSort = function (nums1, m, nums2, n) {
 // }
 // console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
 
-// 📍 27. Remove Element
+// ❓ 27. Remove Element
 
 var removeElementWithMethod = function (nums, val) {
   let k;
@@ -41,7 +43,7 @@ var removeElement = function (nums, val) {
   return k;
 };
 
-// 📍 26. Remove Duplicates from Sorted Array
+// ❓ 26. Remove Duplicates from Sorted Array
 
 var removeDuplicatesWithMethod = function (nums) {
   let count = 0;
@@ -72,7 +74,7 @@ const removeDuplicates = function (nums) {
 
 // console.log(removeDuplicates([1,2,3,3,4,4,4,4,5]))
 
-// 📍 169. Majority Element
+// ❓ 169. Majority Element
 
 var majorityElement = function (nums) {
 //   let count = 0;
@@ -98,3 +100,34 @@ var majorityElement = function (nums) {
 // lol 1500ms
 
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
+
+
+
+
+
+
+// 💡💡💡 Two Pointers
+
+// 💡💡💡 Hashmap
+
+// 💡💡💡 Intervals
+
+// 💡💡💡 Stack
+
+// 💡💡💡 Linked List
+
+// 💡💡💡 Binary Tree General
+
+// 💡💡💡 Binary Tree BFS
+
+// 💡💡💡 Binary Search Tree
+
+// 💡💡💡 Divide & Conquer
+
+// 💡💡💡 Binary Search
+
+// 💡💡💡 Bit Manipulation
+
+// 💡💡💡 Math
+
+// 💡💡💡 1D DP
