@@ -127,8 +127,11 @@ var majorityElement = function (nums) {
 
 // ❓ 1. Two Sum
 
-const nums = [0, 1, 2, 2, 4, 7, 8, 10];
+// const nums = [0, 1, 2, 2, 4, 7, 8, 10];
+const nums = [3,3]; // 통과가 안 되는 케이스
 const target = 6;
+
+
 
 var twoSum = function (nums, target) {
   const m = new Map();
@@ -139,7 +142,7 @@ var twoSum = function (nums, target) {
     rest = target - nums[i];
     m.set(nums[i], i) // key를 el, val을 idx
 
-    if (m.has(rest)){ // key에 rest있으면
+    if (m.has(rest) && i !== m.get(rest)){ // key에 rest있으면
         arr.push(i, m.get(rest)) // 현재 idx랑 rest idx랑 arr에 push - 여기서 중복 발생
     }
   }
