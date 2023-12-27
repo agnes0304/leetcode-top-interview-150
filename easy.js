@@ -99,11 +99,55 @@ var majorityElement = function (nums) {
 
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
 
+
+
 // ❓ 121. Best Time to Buy and Sell Stock
+/*
+input: {number}[] prices
+output: {number}
+
+최대값에서 최소값을 뺀 값을 리턴
+인덱스 역으로는 불가
+양의 정수 없으면 0 리턴 
+*/
+
+var maxProfit = function(prices) {
+    
+};
 
 // ❓ 13. Roman to Integer
+/* 
+input: {string} s -> roman num
+output: {number}
+
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+
+There are six instances where subtraction is used:
+I can be placed before V (5) and X (10) to make 4 and 9. 
+X can be placed before L (50) and C (100) to make 40 and 90. 
+C can be placed before D (500) and M (1000) to make 400 and 900.*/
+
+var romanToInt = function(s) {
+    
+};
 
 // ❓ 58. Length of Last Word
+
+/*
+input: {string} s
+output: {number}
+*/
+
+var lengthOfLastWord = function(s) {
+    
+};
 
 // ❓ 14. Longest Common Prefix
 
