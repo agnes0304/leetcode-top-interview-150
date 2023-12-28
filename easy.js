@@ -101,7 +101,7 @@ var majorityElement = function (nums) {
 
 // ❓ 121. Best Time to Buy and Sell Stock
 /*
-input: {number}[] prices
+input: {number[]} prices
 output: {number}
 
 최대값에서 최소값을 뺀 값을 리턴
@@ -109,23 +109,22 @@ output: {number}
 양의 정수 없으면 0 리턴 
 */
 
+// heap sort -> max, min val, idx -> if(max idx < min idx){return 0} else {return max val - min val}
 var maxProfit = function (prices) {
-  let p=0;
-  for(let i = 0; i<prices.length; i++){
-    for (let j=i; j<prices.length; j++){
-      if(prices[j]-prices[i] > p){
-        p = prices[j]-prices[i]
+  let p = 0;
+  for (let i = 0; i < prices.length; i++) {
+    for (let j = i; j < prices.length; j++) {
+      if (prices[j] - prices[i] > p) {
+        p = prices[j] - prices[i];
       }
     }
   }
-  return p 
+  return p;
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])); // success
-console.log(maxProfit([2,4,1])); // success
+console.log(maxProfit([2, 4, 1])); // success
 // 하...timelimit이 걸리네?
-
-
 
 // ❓ 13. Roman to Integer
 /* 
