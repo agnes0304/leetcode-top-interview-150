@@ -99,8 +99,6 @@ var majorityElement = function (nums) {
 
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
 
-
-
 // ❓ 121. Best Time to Buy and Sell Stock
 /*
 input: {number}[] prices
@@ -111,9 +109,12 @@ output: {number}
 양의 정수 없으면 0 리턴 
 */
 
-var maxProfit = function(prices) {
-    
+var maxProfit = function (prices) {
+  
 };
+
+console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+console.log(maxProfit([2,4,1]));
 
 // ❓ 13. Roman to Integer
 /* 
@@ -134,9 +135,7 @@ I can be placed before V (5) and X (10) to make 4 and 9.
 X can be placed before L (50) and C (100) to make 40 and 90. 
 C can be placed before D (500) and M (1000) to make 400 and 900.*/
 
-var romanToInt = function(s) {
-    
-};
+// var romanToInt = function (s) {};
 
 // ❓ 58. Length of Last Word
 
@@ -145,9 +144,7 @@ input: {string} s
 output: {number}
 */
 
-var lengthOfLastWord = function(s) {
-    
-};
+// var lengthOfLastWord = function (s) {};
 
 // ❓ 14. Longest Common Prefix
 
@@ -192,7 +189,7 @@ var twoSum = function (nums, target) {
   return arr;
 };
 
-console.log(twoSum(nums, target));
+// console.log(twoSum(nums, target));
 
 // 💡💡💡 Intervals
 
