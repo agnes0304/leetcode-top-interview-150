@@ -2,7 +2,6 @@
 
 // ❓ 88. Merge Sorted Array
 
-// m, n의 0부터 - in-place sorting
 const mergeWithSort = function (nums1, m, nums2, n) {
   for (let i = m, j = 0; j < n; i++, j++) {
     nums1[i] = nums2[j];
@@ -15,6 +14,7 @@ const mergeWithSort = function (nums1, m, nums2, n) {
 
 // }
 // console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
+
 
 // ❓ 27. Remove Element
 
@@ -42,6 +42,7 @@ var removeElement = function (nums, val) {
   }
   return k;
 };
+
 
 // ❓ 26. Remove Duplicates from Sorted Array
 
@@ -74,6 +75,7 @@ const removeDuplicates = function (nums) {
 
 // console.log(removeDuplicates([1,2,3,3,4,4,4,4,5]))
 
+
 // ❓ 169. Majority Element
 
 var majorityElement = function (nums) {
@@ -99,15 +101,8 @@ var majorityElement = function (nums) {
 
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
 
-// ❓ 121. Best Time to Buy and Sell Stock
-/*
-input: {number[]} prices
-output: {number}
 
-최대값에서 최소값을 뺀 값을 리턴
-인덱스 역으로는 불가
-양의 정수 없으면 0 리턴 
-*/
+// ❓ 121. Best Time to Buy and Sell Stock
 
 // general for loop -> timeout
 
@@ -125,6 +120,7 @@ var maxProfit = function (prices) {
 
 // console.log(maxProfit([7, 1, 5, 3, 6, 4])); // success
 // console.log(maxProfit([2, 4, 1])); // success
+
 
 // ❓ 13. Roman to Integer
 /* 
@@ -147,14 +143,9 @@ C can be placed before D (500) and M (1000) to make 400 and 900.*/
 
 // var romanToInt = function (s) {};
 
+
 // ❓ 58. Length of Last Word
 
-/*
-input: {string} s
-output: {number}
-*/
-
-// 마지막 인덱스부터 접근해서 ' '가 아닌 애부터 그 다음 " "까지 카운트
 var lengthOfLastWord = function (s) {
   let count = 0;
   for (let i = s.length-1; i >= 0; i--) {
@@ -169,6 +160,10 @@ var lengthOfLastWord = function (s) {
 
 
 // ❓ 14. Longest Common Prefix
+
+var longestCommonPrefix = function(strs) {
+    
+};
 
 // ❓ 28. Find the Index of the First Occurrence in a String
 
