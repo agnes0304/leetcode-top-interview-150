@@ -109,7 +109,6 @@ output: {number}
 양의 정수 없으면 0 리턴 
 */
 
-// 일단 반복문 돌려보자
 var maxProfit = function (prices) {
   let p=0;
   for(let i = 0; i<prices.length; i++){
@@ -122,9 +121,11 @@ var maxProfit = function (prices) {
   return p 
 };
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4]));
-console.log(maxProfit([2,4,1]));
+console.log(maxProfit([7, 1, 5, 3, 6, 4])); // success
+console.log(maxProfit([2,4,1])); // success
 // 하...timelimit이 걸리네?
+
+
 
 // ❓ 13. Roman to Integer
 /* 
