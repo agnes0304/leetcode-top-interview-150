@@ -161,9 +161,40 @@ var lengthOfLastWord = function (s) {
 
 // ❓ 14. Longest Common Prefix
 
-var longestCommonPrefix = function(strs) {
-    
+var longestCommonPrefix = function (strs) {
+  let pf = "";
+  let prev = "";
+  let count = 0;
+  if (strs.length <= 1) {
+    count = -1;
+    return strs[0];
+}
+  while (count >= 0) {
+      for (let i = 1; i < strs.length; i++) {
+          prev = pf;
+          pf += strs[0][count];
+          if (strs[i][count] !== pf && count===0) {
+              count = -1
+              pf = ""
+              break
+          } else if (strs[i][count] !== pf) { 
+              count = -1
+              pf = prev;
+              break
+          } else {
+              count++
+              prev = pf
+          }
+      }
+  }
+  return pf
 };
+
+console.log(longestCommonPrefix(["flower","flow","flight"]));
+console.log(longestCommonPrefix(["dog","racecar","car"]));
+console.log(longestCommonPrefix([""]));
+console.log(longestCommonPrefix(["ab", "a"]));
+
 
 // ❓ 28. Find the Index of the First Occurrence in a String
 
