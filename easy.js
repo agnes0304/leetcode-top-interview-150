@@ -109,22 +109,22 @@ output: {number}
 양의 정수 없으면 0 리턴 
 */
 
-// heap sort -> max, min val, idx -> if(max idx < min idx){return 0} else {return max val - min val}
+// general for loop -> timeout
+
 var maxProfit = function (prices) {
-  let p = 0;
-  for (let i = 0; i < prices.length; i++) {
-    for (let j = i; j < prices.length; j++) {
-      if (prices[j] - prices[i] > p) {
-        p = prices[j] - prices[i];
-      }
-    }
-  }
-  return p;
+  // let p = 0;
+  // for (let i = 0; i < prices.length; i++) {
+  //   for (let j = i; j < prices.length; j++) {
+  //     if (prices[j] - prices[i] > p) {
+  //       p = prices[j] - prices[i];
+  //     }[]
+  //   }
+  // }
+  // return p;
 };
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4])); // success
-console.log(maxProfit([2, 4, 1])); // success
-// 하...timelimit이 걸리네?
+// console.log(maxProfit([7, 1, 5, 3, 6, 4])); // success
+// console.log(maxProfit([2, 4, 1])); // success
 
 // ❓ 13. Roman to Integer
 /* 
@@ -154,7 +154,19 @@ input: {string} s
 output: {number}
 */
 
-// var lengthOfLastWord = function (s) {};
+// 마지막 인덱스부터 접근해서 ' '가 아닌 애부터 그 다음 " "까지 카운트
+var lengthOfLastWord = function (s) {
+  let count = 0;
+  for (let i = s.length-1; i >= 0; i--) {
+    if (s[i] !== " ") {
+      count++;
+    } else if (count > 0 && s[i] === " ") {
+      break
+    }
+  }
+  return count
+};
+
 
 // ❓ 14. Longest Common Prefix
 
