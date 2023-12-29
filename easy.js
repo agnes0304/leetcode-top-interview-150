@@ -15,7 +15,6 @@ const mergeWithSort = function (nums1, m, nums2, n) {
 // }
 // console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
 
-
 // ❓ 27. Remove Element
 
 var removeElementWithMethod = function (nums, val) {
@@ -42,7 +41,6 @@ var removeElement = function (nums, val) {
   }
   return k;
 };
-
 
 // ❓ 26. Remove Duplicates from Sorted Array
 
@@ -75,7 +73,6 @@ const removeDuplicates = function (nums) {
 
 // console.log(removeDuplicates([1,2,3,3,4,4,4,4,5]))
 
-
 // ❓ 169. Majority Element
 
 var majorityElement = function (nums) {
@@ -101,7 +98,6 @@ var majorityElement = function (nums) {
 
 // console.log(majorityElement([1,1,1,1,2,2,2,2,2]));
 
-
 // ❓ 121. Best Time to Buy and Sell Stock
 
 // general for loop -> timeout
@@ -116,11 +112,26 @@ var maxProfit = function (prices) {
   //   }
   // }
   // return p;
+
+  let left;
+  let right;
+  let p = 0;
+
+  for (let i = 0; i < prices.length; j++) { // 더해주는 값
+    left = prices[0];
+    right = prices[i];
+
+    if (right - left > 0 && right - left > p) {
+      p = right - left;
+
+    } else if (right - left < 0) {
+      left;
+    }
+  }
 };
 
 // console.log(maxProfit([7, 1, 5, 3, 6, 4])); // success
 // console.log(maxProfit([2, 4, 1])); // success
-
 
 // ❓ 13. Roman to Integer
 /* 
@@ -143,21 +154,19 @@ C can be placed before D (500) and M (1000) to make 400 and 900.*/
 
 // var romanToInt = function (s) {};
 
-
 // ❓ 58. Length of Last Word
 
 var lengthOfLastWord = function (s) {
   let count = 0;
-  for (let i = s.length-1; i >= 0; i--) {
+  for (let i = s.length - 1; i >= 0; i--) {
     if (s[i] !== " ") {
       count++;
     } else if (count > 0 && s[i] === " ") {
-      break
+      break;
     }
   }
-  return count
+  return count;
 };
-
 
 // ❓ 14. Longest Common Prefix
 
@@ -165,38 +174,42 @@ var longestCommonPrefix = function (strs) {
   let pf = "";
   let prev = "";
   let count = 0;
+
   if (strs.length <= 1) {
     count = -1;
     return strs[0];
-}
-  while (count >= 0) {
-      for (let i = 1; i < strs.length; i++) {
-          prev = pf;
-          pf += strs[0][count];
-          if (strs[i][count] !== pf && count===0) {
-              count = -1
-              pf = ""
-              break
-          } else if (strs[i][count] !== pf) { 
-              count = -1
-              pf = prev;
-              break
-          } else {
-              count++
-              prev = pf
-          }
-      }
   }
-  return pf
+  while (count >= 0) {
+    for (let i = 1; i < strs.length; i++) {
+      prev = pf;
+      pf += strs[0][count];
+      if (strs[i][count] !== pf && count === 0) {
+        count = -1;
+        pf = "";
+        break;
+      } else if (strs[i][count] !== pf) {
+        count = -1;
+        pf = prev;
+        break;
+      } else {
+        count++;
+        prev = pf;
+      }
+    }
+  }
+  return pf;
 };
 
-console.log(longestCommonPrefix(["flower","flow","flight"]));
-console.log(longestCommonPrefix(["dog","racecar","car"]));
+console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+console.log(longestCommonPrefix(["dog", "racecar", "car"]));
 console.log(longestCommonPrefix([""]));
 console.log(longestCommonPrefix(["ab", "a"]));
 
-
 // ❓ 28. Find the Index of the First Occurrence in a String
+
+var strStr = function(haystack, needle) {
+    
+};
 
 // 💡💡💡 Two Pointers
 
