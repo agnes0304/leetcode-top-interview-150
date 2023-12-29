@@ -208,7 +208,19 @@ console.log(longestCommonPrefix(["ab", "a"]));
 // ❓ 28. Find the Index of the First Occurrence in a String
 
 var strStr = function(haystack, needle) {
-    
+    let idx = -1; 
+    for(let i = 0 ; i < haystack.length; i++){
+      if(haystack[i] === needle[0]){
+        idx = i;
+        for(let j = 0; j < needle.length; j++){
+          if(haystack[j]!==needle[j]){
+            idx = -1;
+            break
+          }
+        }
+      }
+    }
+    return idx;
 };
 
 // 💡💡💡 Two Pointers
