@@ -218,6 +218,9 @@ var strStr = function(haystack, needle) {
             break
           }
         }
+        if (idx !== -1){
+          break
+        }
       }
     }
     return idx;
